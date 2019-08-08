@@ -1,0 +1,28 @@
+<<<<<<< HEAD
+﻿<?xml version="1.0" encoding="utf-8"?>
+<people>
+  <person>
+    <name>adam1</name>
+    <age>16</age>
+    <email>franco@gmail.com</email>
+  </person>
+  <person>
+    <name>adam2</name>
+    <age>16</age>
+    <email>franco@gmail.com</email>
+  </person>
+=======
+﻿<?xml version="1.0" encoding="utf-8"?>
+<people>
+  <person>
+    <name>adam1</name>
+    <age>16</age>
+    <email>franco@gmail.com</email>
+  </person>
+  <person>
+    <name>adam2</name>
+    <age>16</age>
+    <email>franco@gmail.com</email>
+  </person>
+>>>>>>> 7f85a414ed6b84bdf726a283e9468a6c5e3979f0
+</people>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2050
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CALLBACK I", "CALLBACK I\CALLBACK I.csproj", "{2AD45331-8DEF-4035-B953-822F41C873DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2AD45331-8DEF-4035-B953-822F41C873DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AD45331-8DEF-4035-B953-822F41C873DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AD45331-8DEF-4035-B953-822F41C873DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AD45331-8DEF-4035-B953-822F41C873DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {41361F45-5941-49FB-85BD-C2696AB42E07}
+	EndGlobalSection
+EndGlobal

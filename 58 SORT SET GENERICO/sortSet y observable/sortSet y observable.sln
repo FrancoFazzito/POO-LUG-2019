@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2050
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sortSet y observable", "sortSet y observable\sortSet y observable.csproj", "{05A79239-3F8C-472E-AB2B-48BD13ABCFC4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{05A79239-3F8C-472E-AB2B-48BD13ABCFC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05A79239-3F8C-472E-AB2B-48BD13ABCFC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05A79239-3F8C-472E-AB2B-48BD13ABCFC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05A79239-3F8C-472E-AB2B-48BD13ABCFC4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D702EB53-8955-4C15-992E-3468037A6831}
+	EndGlobalSection
+EndGlobal

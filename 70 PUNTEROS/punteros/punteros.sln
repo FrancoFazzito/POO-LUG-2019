@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2050
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "punteros", "punteros\punteros.csproj", "{2CE3465C-2BCC-49BD-AB4A-28D8F1477874}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2CE3465C-2BCC-49BD-AB4A-28D8F1477874}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CE3465C-2BCC-49BD-AB4A-28D8F1477874}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CE3465C-2BCC-49BD-AB4A-28D8F1477874}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CE3465C-2BCC-49BD-AB4A-28D8F1477874}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4136036D-9476-489A-8B07-4A5CE7363670}
+	EndGlobalSection
+EndGlobal

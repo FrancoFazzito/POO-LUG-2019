@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.352
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "advance func", "advance func\advance func.csproj", "{68B6114C-2D14-48F4-A40E-0F68975FD512}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{68B6114C-2D14-48F4-A40E-0F68975FD512}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68B6114C-2D14-48F4-A40E-0F68975FD512}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68B6114C-2D14-48F4-A40E-0F68975FD512}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68B6114C-2D14-48F4-A40E-0F68975FD512}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8A98B82D-650E-4AF0-9344-9C0C3A67AE4E}
+	EndGlobalSection
+EndGlobal

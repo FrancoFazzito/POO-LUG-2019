@@ -1,0 +1,54 @@
+clase AlumnoLista:
+atributos:
+	List<Alumno> alumnos;
+
+constructores:
+	AlumnoLista()
+
+metodos:
+	void AñadirAlumno(Alumno alumno)
+	void EliminarAlumno(int legajo)
+	void EditarAlumno(int legajoBusqueda, int legajo, string nombre, string apellido, bool activo, DateTime fechaIngreso, DateTime fechaNacimiento, int materiasAprobadas)
+	List<Alumno> GetList()
+
+clase Alumno:
+
+atributos:
+	int legajo
+	string nombre
+	string apellido
+	DateTime fechaNacimiento
+	DateTime fechaIngreso
+	int edad
+	bool activo
+	int cantidadMateriasAprobadas
+
+constructores:
+	Alumno()
+	Alumno(int legajo, string nombre, string apellido, DateTime fechaNacimiento, DateTime fechaIngreso, int edad, int cantidadMateriasAprobadas, bool activo)
+
+destructor:
+	~Alumno()
+
+propiedades:
+
+	lectura y escritura:
+	Legajo: 	get  set 
+        Nombre: 	get  set
+        Apellido:	get  set        
+	Activo: 	get  set
+
+	escritura:		
+        FechaNacimiento: 	   set
+        FechaIngreso: 	           set 
+        CantidadMateriasAprobadas: set 
+
+	lectura:
+	Edad: 		get
+
+metodos:
+	bool GetFecha()
+	int GetCantMateriasNoAprobadas()
+	int GetEdadIngreso()
+	int? Antiguedad(string tipoRetorno) (el int es nullable)
+	
