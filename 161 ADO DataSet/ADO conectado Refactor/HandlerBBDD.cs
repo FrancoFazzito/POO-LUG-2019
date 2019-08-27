@@ -1,26 +1,40 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace ADO_conectado_Refactor
 {
     class HandlerBDPersona
     {
+        private DataTable tablaPersona;
+        private DataSet dataSetPersona;
+
         public event EventHandler EventUpdate;
 
         private const string CONNECTION_STRING = "Data Source=.;Initial Catalog=Persona;Integrated Security=True";
 
+        #region PERSONA
+        private const string DATASET_TABLA_PERSONA = "DataSetPersona";
         private const string TABLA_PERSONA = "Persona";
+        private const string DATA_ADAPTER_PERSONA = "PersonaDataAdapter";
+
         private const string APELLIDO = "Apellido";
         private const string NOMBRE = "Nombre";
         private const string ID = "Id";
-        private const string ALL = "Id,Nombre,Apellido";
 
+        private const string ALL = "Id,Nombre,Apellido";
+        #endregion
+
+        #region PARAMETROS
         private const string PARAMETER_ID = "@id";
         private const string PARAMETER_NOMBRE = "@nombre";
         private const string PARAMATER_APELLIDO = "@apellido";
         private const string PARAMETER_FILTRO = "@filtro";
+        
+        #endregion
 
+        #region CONSULTAS
         private readonly string ALTA_PERSONA = $"INSERT INTO {TABLA_PERSONA} ({ID},{APELLIDO},{NOMBRE}) VALUES ({PARAMETER_ID},{PARAMETER_NOMBRE},{PARAMATER_APELLIDO})";
         private readonly string MODIFICAR_PERSONA = $"UPDATE {TABLA_PERSONA} SET {NOMBRE} = {PARAMETER_NOMBRE} , {APELLIDO} = {PARAMATER_APELLIDO} WHERE {ID} = {PARAMETER_ID};";
         private readonly string BAJA_PERSONA = $"DELETE FROM {TABLA_PERSONA} WHERE {ID} = {PARAMETER_ID};";
@@ -29,6 +43,14 @@ namespace ADO_conectado_Refactor
         private readonly string SELECT = $"SELECT {ALL} FROM {TABLA_PERSONA}";
         private readonly string ORDERBY_ID_ASC = $"SELECT {ALL} FROM {TABLA_PERSONA} ORDER BY {APELLIDO} ASC";
         private readonly string EXIST_ID = $"SELECT 1 FROM {TABLA_PERSONA} WHERE {ID} = {PARAMETER_ID}";
+        #endregion
+
+        public HandlerBDPersona()
+        {
+            //tablaPersona = new DataTable(TABLA_PERSONA);
+            //dataSetPersona = new DataSet(DATASET_TABLA_PERSONA);
+            //dataSetPersona.Tables.Add(tablaPersona);
+        }
 
         public void AltaPersona(int id, string nombre, string apellido)
         {
@@ -115,7 +137,7 @@ namespace ADO_conectado_Refactor
                 using (SqlCommand command = new SqlCommand(EXIST_ID, connection))
                 {
                     command.Parameters.AddWithValue(PARAMETER_ID, id);
-                    object result = command.ExecuteScalar();
+                    var result = command.ExecuteScalar();
                     if (result != null)
                     {
                         return (int)result > 0;
@@ -222,5 +244,13 @@ namespace ADO_conectado_Refactor
                 }
             }
         }
+
+        //public void CreateDataAdapter()
+        //{
+        //    SqlDataAdapter dataAdapter = new SqlDataAdapter(SELECT, CONNECTION_STRING);
+        //    dataAdapter.Fill(dataSetPersona, DATA_ADAPTER_PERSONA);
+        //    tablaPersona = dataSetPersona.Tables[TABLA_PERSONA];
+        //    int tableCount = dataSetPersona.Tables.Count;
+        //}
     }
 }
