@@ -1,0 +1,116 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Alumnos">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Legajo" type="xs:string" />
+                <xs:element name="Nombre" type="xs:string" minOccurs="0" />
+                <xs:element name="Apellido" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Telefonos">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Codigo" type="xs:int" />
+                <xs:element name="Legajo_Alumno" type="xs:string" minOccurs="0" />
+                <xs:element name="Numero" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//Alumnos" />
+        <xs:field xpath="Legajo" />
+      </xs:unique>
+      <xs:unique name="Telefonos_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//Telefonos" />
+        <xs:field xpath="Codigo" />
+      </xs:unique>
+      <xs:keyref name="Alumno_Telefono" refer="Constraint1">
+        <xs:selector xpath=".//Telefonos" />
+        <xs:field xpath="Legajo_Alumno" />
+      </xs:keyref>
+    </xs:element>
+  </xs:schema>
+  <Alumnos>
+    <Legajo>A-0</Legajo>
+    <Nombre>0</Nombre>
+    <Apellido>0</Apellido>
+  </Alumnos>
+  <Alumnos>
+    <Legajo>A-5</Legajo>
+    <Nombre>1</Nombre>
+    <Apellido>1</Apellido>
+  </Alumnos>
+  <Alumnos>
+    <Legajo>A-10</Legajo>
+    <Nombre>2</Nombre>
+    <Apellido>2</Apellido>
+  </Alumnos>
+  <Alumnos>
+    <Legajo>A-15</Legajo>
+    <Nombre>3</Nombre>
+    <Apellido>3</Apellido>
+  </Alumnos>
+  <Alumnos>
+    <Legajo>A-20</Legajo>
+    <Nombre>4</Nombre>
+    <Apellido>4</Apellido>
+  </Alumnos>
+  <Alumnos>
+    <Legajo>A-25</Legajo>
+    <Nombre>5</Nombre>
+    <Apellido>5</Apellido>
+  </Alumnos>
+  <Alumnos>
+    <Legajo>A-30</Legajo>
+    <Nombre>6</Nombre>
+    <Apellido>6</Apellido>
+  </Alumnos>
+  <Alumnos>
+    <Legajo>A-35</Legajo>
+    <Nombre>7</Nombre>
+    <Apellido>7</Apellido>
+  </Alumnos>
+  <Alumnos>
+    <Legajo>A-40</Legajo>
+    <Nombre>8</Nombre>
+    <Apellido>8</Apellido>
+  </Alumnos>
+  <Alumnos>
+    <Legajo>A-45</Legajo>
+    <Nombre>9</Nombre>
+    <Apellido>9</Apellido>
+  </Alumnos>
+  <Telefonos>
+    <Codigo>0</Codigo>
+    <Legajo_Alumno>A-0</Legajo_Alumno>
+    <Numero>0</Numero>
+  </Telefonos>
+  <Telefonos>
+    <Codigo>1</Codigo>
+    <Legajo_Alumno>A-0</Legajo_Alumno>
+    <Numero>11</Numero>
+  </Telefonos>
+  <Telefonos>
+    <Codigo>2</Codigo>
+    <Legajo_Alumno>A-0</Legajo_Alumno>
+    <Numero>aq</Numero>
+  </Telefonos>
+  <Telefonos>
+    <Codigo>3</Codigo>
+    <Legajo_Alumno>A-0</Legajo_Alumno>
+    <Numero>2323</Numero>
+  </Telefonos>
+  <Telefonos>
+    <Codigo>4</Codigo>
+    <Legajo_Alumno>A-0</Legajo_Alumno>
+    <Numero>44</Numero>
+  </Telefonos>
+</NewDataSet>
