@@ -184,12 +184,14 @@ namespace _161_ADO_DATA_ADAPTER
             {
                 dataTelefono[Constantes.Telefono.NUMERO] = numero;
             }
+            EscribirXML();
         }
 
         public void BajaTelefono(Telefono telefono)
         {
             DataRow dataTelefono = GetRowTelefono(telefono);
             dataSet.Tables[Constantes.Telefono.TABLA].Rows.Remove(dataTelefono);
+            EscribirXML();
         }
 
         public List<Telefono> GetTelefonos(Alumno alumno)

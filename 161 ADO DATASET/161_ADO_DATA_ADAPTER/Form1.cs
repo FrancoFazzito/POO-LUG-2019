@@ -46,6 +46,10 @@ namespace _161_ADO_DATA_ADAPTER
         {
             try
             {
+                foreach (Telefono telefono in handler.GetTelefonos(GetAlumnoDGV()))
+                {
+                    handler.BajaTelefono(telefono);
+                }
                 handler.BajaAlumno(GetAlumnoDGV());
                 MostrarDGValumnos();
             }
