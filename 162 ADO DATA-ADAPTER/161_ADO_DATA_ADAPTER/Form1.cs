@@ -17,11 +17,13 @@ namespace _161_ADO_DATA_ADAPTER
         {
             InitializeComponent();
             handler = new BDhandler();
-            MostrarDGValumnos();
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            MostrarDGVTelefonos();
+            if (handler.ExisteXML)
+            {
+                MostrarDGValumnos();
+            }
         }
 
         #region ABM Alumno events
@@ -46,6 +48,10 @@ namespace _161_ADO_DATA_ADAPTER
         {
             try
             {
+                foreach (Telefono telefono in handler.GetTelefonos(GetAlumnoDGV()))
+                {
+                    handler.BajaTelefono(telefono);
+                }
                 handler.BajaAlumno(GetAlumnoDGV());
                 MostrarDGValumnos();
             }
@@ -147,8 +153,17 @@ namespace _161_ADO_DATA_ADAPTER
 
         public void Mostrar(DataGridView DGV, IEnumerable<object> data)
         {
-            DGV.DataSource = null;
-            DGV.DataSource = data;
+            if (data.Count() > 0)
+            {
+                DGV.DataSource = null;
+                DGV.DataSource = data;
+            }
+            else
+            {
+                DGV.DataSource = null;
+                DGV.Rows.Clear();
+            }
+            
         }
         #endregion
 

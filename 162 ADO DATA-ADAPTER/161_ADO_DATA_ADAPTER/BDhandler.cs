@@ -1,15 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.IO;
 
 namespace _161_ADO_DATA_ADAPTER
 {
     class BDhandler
     {
-        private DataSet dataSet;
+        private DataSet dataSetBD;
+
         private DataTable dataTableAlumnos;
         private DataTable dataTableTelefonos;
+
+        private SqlConnection conexionBD;
+        private SqlCommand selectCommandBD;
+        private SqlDataAdapter adapter;
 
         public bool ExisteXML
         {
@@ -18,28 +24,52 @@ namespace _161_ADO_DATA_ADAPTER
 
         public BDhandler()
         {
-            dataSet = new DataSet();
+            dataSetBD = new DataSet();
             if (!ExisteXML)
             {
                 CrearDataTableAlumno();
                 CrearDataTableTelefonos();
                 CrearRelationAlumnoTelefono();
-                EscribirXML();
+                ActualizarDatos();
             }
             else
             {
                 LeerXML();
             }
+
+            CrearDataAdapter();
+        }
+
+        private void CrearDataAdapter()
+        {
+            conexionBD = new SqlConnection(Constantes.Connection.CONNECTION_STRING);
+
+            selectCommandBD = new SqlCommand(Constantes.Connection.SELECT_FROM);
+            selectCommandBD.Connection = conexionBD;
+
+            adapter = new SqlDataAdapter();
+            adapter.SelectCommand = selectCommandBD;
+
+            conexionBD.Open();
+            adapter.Fill(dataSetBD);
+            conexionBD.Close();
         }
 
         #region XML metodos
         private void LeerXML()
         {
-            dataSet.ReadXml(Constantes.File.XML, XmlReadMode.ReadSchema);
+            dataSetBD.ReadXml(Constantes.File.XML, XmlReadMode.ReadSchema);
         }
-        private void EscribirXML()
+        private void ActualizarDatos()
         {
-            dataSet.WriteXml(Constantes.File.XML, XmlWriteMode.WriteSchema);
+            dataSetBD.WriteXml(Constantes.File.XML, XmlWriteMode.WriteSchema);
+
+            selectCommandBD.Connection = conexionBD;
+            adapter.SelectCommand = selectCommandBD;
+
+            conexionBD.Open();
+            adapter.Update(dataSetBD);
+            conexionBD.Close();
         }
         #endregion
 
@@ -58,7 +88,12 @@ namespace _161_ADO_DATA_ADAPTER
 
             dataTableAlumnos.PrimaryKey = new DataColumn[] { columnaLegajo };
 
-            this.dataSet.Tables.Add(dataTableAlumnos);
+            this.dataSetBD.Tables.Add(dataTableAlumnos);
+        }
+
+        internal IEnumerable<Telefono> GetTelefonos()
+        {
+            throw new NotImplementedException();
         }
 
         private void CrearDataTableTelefonos()
@@ -73,17 +108,17 @@ namespace _161_ADO_DATA_ADAPTER
 
             dataTableTelefonos.PrimaryKey = new DataColumn[] { columnaNumero };
 
-            this.dataSet.Tables.Add(dataTableTelefonos);
+            this.dataSetBD.Tables.Add(dataTableTelefonos);
         }
 
         private void CrearRelationAlumnoTelefono()
         {
-            DataColumn PKalumno = dataSet.Tables[Constantes.Alumno.TABLA].Columns[Constantes.Alumno.LEGAJO];
-            DataColumn FKtelefono = dataSet.Tables[Constantes.Telefono.TABLA].Columns[Constantes.Telefono.LEGAJO_RELACION];
+            DataColumn PKalumno = dataSetBD.Tables[Constantes.Alumno.TABLA].Columns[Constantes.Alumno.LEGAJO];
+            DataColumn FKtelefono = dataSetBD.Tables[Constantes.Telefono.TABLA].Columns[Constantes.Telefono.LEGAJO_RELACION];
 
             DataRelation dataRelation_alumno_telefono = new DataRelation(Constantes.Relation.RELATION_ALUMNO_TEL, PKalumno, FKtelefono);
 
-            dataSet.Relations.Add(dataRelation_alumno_telefono);
+            dataSetBD.Relations.Add(dataRelation_alumno_telefono);
         }
         #endregion
 
@@ -93,14 +128,14 @@ namespace _161_ADO_DATA_ADAPTER
         {
             if (NoExisteID(alumno))
             {
-                DataRow dataRowAlta = dataSet.Tables[Constantes.Alumno.TABLA].NewRow();
+                DataRow dataRowAlta = dataSetBD.Tables[Constantes.Alumno.TABLA].NewRow();
 
                 dataRowAlta[Constantes.Alumno.LEGAJO] = alumno.Legajo;
                 dataRowAlta[Constantes.Alumno.NOMBRE] = alumno.Nombre;
                 dataRowAlta[Constantes.Alumno.APELLIDO] = alumno.Apellido;
 
-                dataSet.Tables[Constantes.Alumno.TABLA].Rows.Add(dataRowAlta);
-                EscribirXML();
+                dataSetBD.Tables[Constantes.Alumno.TABLA].Rows.Add(dataRowAlta);
+                ActualizarDatos();
             }
             else
             {
@@ -111,10 +146,8 @@ namespace _161_ADO_DATA_ADAPTER
         public void BajaAlumno(Alumno alumno)
         {
             DataRow dataRowBaja = getRowAlumno(alumno);
-
-            dataSet.Tables[Constantes.Alumno.TABLA].Rows.Remove(dataRowBaja);
-
-            EscribirXML();
+            dataSetBD.Tables[Constantes.Alumno.TABLA].Rows.Remove(dataRowBaja);
+            ActualizarDatos();
         }
 
         public void ModificarAlumno(Alumno alumno)
@@ -124,7 +157,7 @@ namespace _161_ADO_DATA_ADAPTER
             dataRowModificar[Constantes.Alumno.NOMBRE] = alumno.Nombre;
             dataRowModificar[Constantes.Alumno.APELLIDO] = alumno.Apellido;
 
-            EscribirXML();
+            ActualizarDatos();
         }
 
         public List<Alumno> GetListAlumnos()
@@ -143,17 +176,17 @@ namespace _161_ADO_DATA_ADAPTER
 
         private bool NoExisteID(Alumno alumno)
         {
-            return dataSet.Tables[Constantes.Alumno.TABLA].Rows.Find(alumno.Legajo) == null;
+            return dataSetBD.Tables[Constantes.Alumno.TABLA].Rows.Find(alumno.Legajo) == null;
         }
 
         private DataRow getRowAlumno(Alumno alumno)
         {
-            return dataSet.Tables[Constantes.Alumno.TABLA].Rows.Find(alumno.Legajo);
+            return dataSetBD.Tables[Constantes.Alumno.TABLA].Rows.Find(alumno.Legajo);
         }
 
         private DataRow[] GetRowsAlumno()
         {
-            return dataSet.Tables[Constantes.Alumno.TABLA].Select();
+            return dataSetBD.Tables[Constantes.Alumno.TABLA].Select();
         }
         #endregion
 
@@ -162,13 +195,13 @@ namespace _161_ADO_DATA_ADAPTER
         {
             if (NoExisteLegajo(telefono))
             {
-                DataRow dataRowAlta = dataSet.Tables[Constantes.Telefono.TABLA].NewRow();
+                DataRow dataRowAlta = dataSetBD.Tables[Constantes.Telefono.TABLA].NewRow();
 
                 dataRowAlta[Constantes.Telefono.NUMERO] = telefono.Numero;
                 dataRowAlta[Constantes.Telefono.LEGAJO_RELACION] = alumno.Legajo;
 
-                dataSet.Tables[Constantes.Telefono.TABLA].Rows.Add(dataRowAlta);
-                EscribirXML();
+                dataSetBD.Tables[Constantes.Telefono.TABLA].Rows.Add(dataRowAlta);
+                ActualizarDatos();
             }
             else
             {
@@ -183,13 +216,19 @@ namespace _161_ADO_DATA_ADAPTER
             if (NoExisteLegajo(numero))
             {
                 dataTelefono[Constantes.Telefono.NUMERO] = numero;
+                ActualizarDatos();
+            }
+            else
+            {
+                throw new Exception($"el telefono con numero {numero} ya existe");
             }
         }
 
         public void BajaTelefono(Telefono telefono)
         {
             DataRow dataTelefono = GetRowTelefono(telefono);
-            dataSet.Tables[Constantes.Telefono.TABLA].Rows.Remove(dataTelefono);
+            dataSetBD.Tables[Constantes.Telefono.TABLA].Rows.Remove(dataTelefono);
+            ActualizarDatos();
         }
 
         public List<Telefono> GetTelefonos(Alumno alumno)
@@ -206,20 +245,22 @@ namespace _161_ADO_DATA_ADAPTER
 
         private bool NoExisteLegajo(Telefono telefono)
         {
-            return dataSet.Tables[Constantes.Telefono.TABLA].Rows.Find(telefono.Numero) == null;
+            return dataSetBD.Tables[Constantes.Telefono.TABLA].Rows.Find(telefono.Numero) == null;
         }
         private bool NoExisteLegajo(string numero)
         {
-            return dataSet.Tables[Constantes.Telefono.TABLA].Rows.Find(numero) == null;
+            return dataSetBD.Tables[Constantes.Telefono.TABLA].Rows.Find(numero) == null;
         }
         private DataRow GetRowTelefono(Telefono telefono)
         {
-            return dataSet.Tables[Constantes.Telefono.TABLA].Rows.Find(telefono.Numero);
+            return dataSetBD.Tables[Constantes.Telefono.TABLA].Rows.Find(telefono.Numero);
         }
 
         private DataRow[] GetDataRowsTelefono(Alumno alumno)
         {
-            return dataSet.Tables[Constantes.Alumno.TABLA].Rows.Find(alumno.Legajo).GetChildRows(Constantes.Relation.RELATION_ALUMNO_TEL);
+            DataRowCollection rows = dataSetBD.Tables[Constantes.Alumno.TABLA].Rows;
+            DataRow[] rowsarray = rows.Find(alumno.Legajo).GetChildRows(Constantes.Relation.RELATION_ALUMNO_TEL);
+            return rowsarray;
         }
         #endregion
     }

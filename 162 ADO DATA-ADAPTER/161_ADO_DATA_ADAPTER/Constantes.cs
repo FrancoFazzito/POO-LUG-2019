@@ -32,5 +32,10 @@ namespace _161_ADO_DATA_ADAPTER
         {
             public const string RELATION_ALUMNO_TEL = "Alumno_Telefono";
         }
+        public static class Connection
+        {
+            public const string CONNECTION_STRING = "Data Source=.;Initial Catalog=Alumno_Telefono;Integrated Security=True";
+            public const string SELECT_FROM = "select * from Alumno";
+        }
     }
 }
