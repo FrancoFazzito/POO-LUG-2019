@@ -16,12 +16,11 @@ namespace _161_ADO_DATA_ADAPTER
         public Form1()
         {
             InitializeComponent();
-            handler = new BDhandler();
-            MostrarDGValumnos();
+            handler = new BDhandler();      
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            MostrarDGVTelefonos();
+            
         }
 
         #region ABM Alumno events
@@ -170,7 +169,5 @@ namespace _161_ADO_DATA_ADAPTER
 
 
         #endregion
-
-
     }
 }

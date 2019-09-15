@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("161_ADO_DATA_ADAPTER")]
+[assembly: AssemblyTitle("162 ADO DATA-ADAPTER")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("161_ADO_DATA_ADAPTER")]
+[assembly: AssemblyProduct("162 ADO DATA-ADAPTER")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("d3b71961-5304-4314-aa66-011a88d4edf4")]
+[assembly: Guid("16fec18a-7737-4789-8094-f36d980ded4d")]
 
 // Version information for an assembly consists of the following four values:
 //

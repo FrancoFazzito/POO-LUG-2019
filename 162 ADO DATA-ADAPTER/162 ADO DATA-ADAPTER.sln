@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29215.179
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "161_ADO_DATA_ADAPTER", "161_ADO_DATA_ADAPTER\161_ADO_DATA_ADAPTER.csproj", "{D3B71961-5304-4314-AA66-011A88D4EDF4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "162 ADO DATA-ADAPTER", "162 ADO DATA-ADAPTER\162 ADO DATA-ADAPTER.csproj", "{16FEC18A-7737-4789-8094-F36D980DED4D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D3B71961-5304-4314-AA66-011A88D4EDF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D3B71961-5304-4314-AA66-011A88D4EDF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D3B71961-5304-4314-AA66-011A88D4EDF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D3B71961-5304-4314-AA66-011A88D4EDF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16FEC18A-7737-4789-8094-F36D980DED4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16FEC18A-7737-4789-8094-F36D980DED4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16FEC18A-7737-4789-8094-F36D980DED4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16FEC18A-7737-4789-8094-F36D980DED4D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {4C744754-769E-4820-BE4B-C50CC85A6A3B}
+		SolutionGuid = {FEBDAEAD-C6D4-4DC0-8120-37D7A4D0922C}
 	EndGlobalSection
 EndGlobal

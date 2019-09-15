@@ -1,23 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace _161_ADO_DATA_ADAPTER
+namespace _162_ADO_DATA_ADAPTER
 {
     static class Convert
     {
         public static string ToStringValue(TextBox textBox)
         {
-            if (!string.IsNullOrEmpty(textBox.Text))
+            string value = textBox.Text;
+            if (!string.IsNullOrEmpty(value))
             {
-                return textBox.Text;
+                return value;
             }
             else
             {
-                throw new Exception(getMessageError(textBox));
+                throw new Exception($"ERROR EN {textBox.Name}");
             }
         }
 
@@ -30,15 +27,8 @@ namespace _161_ADO_DATA_ADAPTER
             }
             else
             {
-                throw new Exception(getMessageError(textBox));
+                throw new Exception($"ERROR EN {textBox.Name}");
             }
         }
-
-        private static string getMessageError(TextBox textBox)
-        {
-            return $"ERROR EN {textBox.Name}";
-        }
-
-
     }
 }

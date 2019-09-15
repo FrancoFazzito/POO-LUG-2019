@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace _161_ADO_DATA_ADAPTER.Properties
+namespace _162_ADO_DATA_ADAPTER.Properties
 {
 
 

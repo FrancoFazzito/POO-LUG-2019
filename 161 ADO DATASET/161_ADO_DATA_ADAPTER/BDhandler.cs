@@ -148,6 +148,7 @@ namespace _161_ADO_DATA_ADAPTER
 
         private DataRow getRowAlumno(Alumno alumno)
         {
+            
             return dataSet.Tables[Constantes.Alumno.TABLA].Rows.Find(alumno.Legajo);
         }
 

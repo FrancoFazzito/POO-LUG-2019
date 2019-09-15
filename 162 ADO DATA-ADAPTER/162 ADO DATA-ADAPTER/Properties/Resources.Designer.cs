@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace _161_ADO_DATA_ADAPTER.Properties
+namespace _162_ADO_DATA_ADAPTER.Properties
 {
 
 
@@ -44,7 +44,7 @@ namespace _161_ADO_DATA_ADAPTER.Properties
             {
                 if ((resourceMan == null))
                 {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("_161_ADO_DATA_ADAPTER.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("_162_ADO_DATA_ADAPTER.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
