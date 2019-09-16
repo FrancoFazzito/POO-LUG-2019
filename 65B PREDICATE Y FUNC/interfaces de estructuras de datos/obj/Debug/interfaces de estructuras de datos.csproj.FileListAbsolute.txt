@@ -1,0 +1,7 @@
+C:\Users\i7 5820K\source\repos\interfaces de estructuras de datos\interfaces de estructuras de datos\bin\Debug\interfaces de estructuras de datos.exe.config
+C:\Users\i7 5820K\source\repos\interfaces de estructuras de datos\interfaces de estructuras de datos\bin\Debug\interfaces de estructuras de datos.exe
+C:\Users\i7 5820K\source\repos\interfaces de estructuras de datos\interfaces de estructuras de datos\bin\Debug\interfaces de estructuras de datos.pdb
+C:\Users\i7 5820K\source\repos\interfaces de estructuras de datos\interfaces de estructuras de datos\obj\Debug\interfaces de estructuras de datos.csprojAssemblyReference.cache
+C:\Users\i7 5820K\source\repos\interfaces de estructuras de datos\interfaces de estructuras de datos\obj\Debug\interfaces de estructuras de datos.csproj.CoreCompileInputs.cache
+C:\Users\i7 5820K\source\repos\interfaces de estructuras de datos\interfaces de estructuras de datos\obj\Debug\interfaces de estructuras de datos.exe
+C:\Users\i7 5820K\source\repos\interfaces de estructuras de datos\interfaces de estructuras de datos\obj\Debug\interfaces de estructuras de datos.pdb
