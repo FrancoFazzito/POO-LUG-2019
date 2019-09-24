@@ -1,0 +1,9 @@
+C:\Users\i7 5820K\source\repos\VISTA\CONTROLADOR\bin\Debug\CONTROLADOR.dll
+C:\Users\i7 5820K\source\repos\VISTA\CONTROLADOR\bin\Debug\CONTROLADOR.pdb
+C:\Users\i7 5820K\source\repos\VISTA\CONTROLADOR\obj\Debug\CONTROLADOR.csproj.CoreCompileInputs.cache
+C:\Users\i7 5820K\source\repos\VISTA\CONTROLADOR\obj\Debug\CONTROLADOR.dll
+C:\Users\i7 5820K\source\repos\VISTA\CONTROLADOR\obj\Debug\CONTROLADOR.pdb
+C:\Users\i7 5820K\source\repos\VISTA\CONTROLADOR\bin\Debug\MODELO.dll
+C:\Users\i7 5820K\source\repos\VISTA\CONTROLADOR\bin\Debug\MODELO.pdb
+C:\Users\i7 5820K\source\repos\VISTA\CONTROLADOR\obj\Debug\CONTROLADOR.csprojAssemblyReference.cache
+C:\Users\i7 5820K\source\repos\VISTA\CONTROLADOR\obj\Debug\CONTROLADOR.csproj.CopyComplete
