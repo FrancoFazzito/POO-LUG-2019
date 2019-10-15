@@ -1,0 +1,24 @@
+CAPA -> QUE ES ? -> es la separación (desacoplamiento) de las partes que componen un sistema software
+
+TIPOS DE CAPAS:
+
+1 -> GUI o VISTA: encargada de mostrar la interfaz grafica al usuario (GUI)
+VISTA REF -> CONTROLADOR ( para el envio de form )
+
+2-> CONTROLLER O CONTROLADOR: encargada de poder manejar las peticiones de GUI o VISTA
+CONTROLADOR REF -> BLL - ENTIDADES - INTERFACES
+
+3-> ENTIDADES o ENTITY: encargada de manipular la estructura del negocio 
+ENTIDADES REF -> NADIE
+
+4-> BLL o NEGOCIO: encargada de manejar las reglas de negocio/logica del comportamiento de la aplicacion
+BLL REF -> ENTIDADES - INTERFACES - ORM
+
+5-> ORM o MAPPERS: encargada de transformar los objetos de negocio -> en -> objetos que puedan ser consumidos por la DAL ( ADO.NET -> DATASET)
+MAPPERS REF -> DAL - ENTIDADES - INTERFACES 
+
+6-> DAL o ACCESO A DATOS: encargada de realizar las consultas al repositorio de datos ( ADO.NET -> SQL COMMAND por ejemplo)
+DAL REF-> NADIE
+
+INTERFACES: encargada de manipular las interfaces de la aplicacion
+INTERFACES REF -> NADIE

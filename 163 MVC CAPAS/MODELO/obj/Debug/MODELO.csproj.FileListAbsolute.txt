@@ -1,6 +1,0 @@
-C:\Users\i7 5820K\source\repos\VISTA\MODELO\bin\Debug\MODELO.dll
-C:\Users\i7 5820K\source\repos\VISTA\MODELO\bin\Debug\MODELO.pdb
-C:\Users\i7 5820K\source\repos\VISTA\MODELO\obj\Debug\MODELO.csprojAssemblyReference.cache
-C:\Users\i7 5820K\source\repos\VISTA\MODELO\obj\Debug\MODELO.csproj.CoreCompileInputs.cache
-C:\Users\i7 5820K\source\repos\VISTA\MODELO\obj\Debug\MODELO.dll
-C:\Users\i7 5820K\source\repos\VISTA\MODELO\obj\Debug\MODELO.pdb
