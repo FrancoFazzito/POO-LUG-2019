@@ -16,7 +16,7 @@ namespace ACCESO_DATOS
             dataAdapter.DeleteCommand = commandBuilder.GetDeleteCommand();
             dataAdapter.UpdateCommand = commandBuilder.GetUpdateCommand();
         }
-        public DataTable RetornarDataTablePersona(string nombreTabla)
+        public DataTable RetornarDataTableSchema(string nombreTabla)
         {
             dataAdapter.SelectCommand.CommandText = Consultas.GetSelect(nombreTabla);
             DataTable dataTable = new DataTable(nombreTabla);
@@ -28,10 +28,10 @@ namespace ACCESO_DATOS
             dataAdapter.Update(dataTable);
         }
 
-        public DataTable Leer(string query)
+        public DataTable Leer(string nombreTabla)
         {
             DataTable dataTable = new DataTable();
-            dataAdapter.SelectCommand.CommandText = query;
+            dataAdapter.SelectCommand.CommandText = Consultas.GetSelect(nombreTabla);
             dataAdapter.Fill(dataTable);
             return dataTable;
         }

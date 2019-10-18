@@ -16,7 +16,7 @@ namespace MAPPERS
         }
         public void Alta(Persona value)
         {
-            DataTable dataTablePersona = servicio.RetornarDataTablePersona(Campos.TABLA_PERSONA);
+            DataTable dataTablePersona = servicio.RetornarDataTableSchema(Campos.TABLA_PERSONA);
             DataRow row = dataTablePersona.NewRow();
             row[Campos.CODIGO_PERSONA] = value.Codigo;
             row[Campos.NOMBRE_PERSONA] = value.Nombre;
@@ -31,7 +31,7 @@ namespace MAPPERS
 
         public void Baja(Persona value)
         {
-            DataTable dataTable = servicio.Leer(Consultas.SELECT_FROM);
+            DataTable dataTable = servicio.Leer(Campos.TABLA_PERSONA);
             dataTable.PrimaryKey = new DataColumn[] { dataTable.Columns[Campos.CODIGO_PERSONA] };
             dataTable.Rows.Find(value.Codigo).Delete();
             Guardar(dataTable);
@@ -40,7 +40,7 @@ namespace MAPPERS
         public List<Persona> Consultar()
         {
             List<Persona> personas = new List<Persona>();
-            DataTable dataTable = servicio.Leer(Consultas.SELECT_FROM);
+            DataTable dataTable = servicio.Leer(Campos.TABLA_PERSONA);
             foreach (DataRow row in dataTable.Rows)
             {
                 Persona persona = new Persona();
@@ -59,7 +59,7 @@ namespace MAPPERS
 
         public void Modificacion(Persona value)
         {
-            DataTable dataTable = servicio.Leer(Consultas.SELECT_FROM);
+            DataTable dataTable = servicio.Leer(Campos.TABLA_PERSONA);
             dataTable.PrimaryKey = new DataColumn[] { dataTable.Columns[Campos.CODIGO_PERSONA] };
             DataRow row = dataTable.Rows.Find(value.Codigo);
             row[Campos.APELLIDO_PERSONA] = value.Apellido;
