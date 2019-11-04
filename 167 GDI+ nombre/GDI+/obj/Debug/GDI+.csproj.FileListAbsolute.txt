@@ -1,0 +1,10 @@
+C:\Users\i7 5820K\source\repos\GDI+\GDI+\bin\Debug\GDI+.exe.config
+C:\Users\i7 5820K\source\repos\GDI+\GDI+\bin\Debug\GDI+.exe
+C:\Users\i7 5820K\source\repos\GDI+\GDI+\bin\Debug\GDI+.pdb
+C:\Users\i7 5820K\source\repos\GDI+\GDI+\obj\Debug\GDI+.csprojAssemblyReference.cache
+C:\Users\i7 5820K\source\repos\GDI+\GDI+\obj\Debug\GDI_.Form1.resources
+C:\Users\i7 5820K\source\repos\GDI+\GDI+\obj\Debug\GDI_.Properties.Resources.resources
+C:\Users\i7 5820K\source\repos\GDI+\GDI+\obj\Debug\GDI+.csproj.GenerateResource.cache
+C:\Users\i7 5820K\source\repos\GDI+\GDI+\obj\Debug\GDI+.csproj.CoreCompileInputs.cache
+C:\Users\i7 5820K\source\repos\GDI+\GDI+\obj\Debug\GDI+.exe
+C:\Users\i7 5820K\source\repos\GDI+\GDI+\obj\Debug\GDI+.pdb
