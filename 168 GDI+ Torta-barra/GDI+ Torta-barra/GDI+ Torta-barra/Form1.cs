@@ -20,6 +20,7 @@ namespace GDI__Torta_barra
 
         private void Button2_Click(object sender, EventArgs e)
         {
+           
             List<int> numeros = new List<int>();
 
             int num1 = int.Parse(textBox1.Text);
@@ -34,6 +35,7 @@ namespace GDI__Torta_barra
 
 
             Graphics g = this.CreateGraphics();
+            BorrarGrafico(g);
             Random random = new Random(DateTime.Now.Millisecond);
             Pen p = new Pen(Color.Black, 1);
 
@@ -54,6 +56,11 @@ namespace GDI__Torta_barra
             g.Dispose();
         }
 
+        private void BorrarGrafico(Graphics g)
+        {
+            g.Clear(this.BackColor);
+        }
+
         private void Button1_Click(object sender, EventArgs e)
         {
             List<int> numeros = new List<int>();
@@ -67,6 +74,7 @@ namespace GDI__Torta_barra
             numeros.Add(num3);
 
             Graphics g = this.CreateGraphics();
+            BorrarGrafico(g);
             Random random = new Random(DateTime.Now.Millisecond);
             Pen p = new Pen(Color.Black, 1);
 
