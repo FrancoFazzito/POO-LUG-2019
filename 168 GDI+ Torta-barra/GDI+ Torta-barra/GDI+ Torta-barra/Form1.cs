@@ -80,6 +80,7 @@ namespace GDI__Torta_barra
 
             Rectangle rec = new Rectangle(50, 175, 150, 125);
             g.DrawRectangle(p, rec);
+
             int sum = numeros.Sum();
             int desplazamientoX = 0;
             int ancho = 30;

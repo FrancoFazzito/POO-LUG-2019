@@ -21,6 +21,7 @@ namespace _166_User_Control
 
         private void Textbox_numerico_Load(object sender, EventArgs e)
         {
+            //SE ADAPTA AL CONTORNO DEL CONTROL
             Txt_value.Location = new Point(0, 0);
             Txt_value.Size = this.Size;
         }

@@ -1,13 +1,13 @@
-﻿namespace _166_User_Control
+﻿namespace Regex_ControlUser
 {
-    partial class Form1
+    partial class Prueba
     {
-        /// <summary>
+        /// <summary> 
         /// Variable del diseñador necesaria.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
+        /// <summary> 
         /// Limpiar los recursos que se estén usando.
         /// </summary>
         /// <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
@@ -20,40 +20,41 @@
             base.Dispose(disposing);
         }
 
-        #region Código generado por el Diseñador de Windows Forms
+        #region Código generado por el Diseñador de componentes
 
-        /// <summary>
+        /// <summary> 
         /// Método necesario para admitir el Diseñador. No se puede modificar
         /// el contenido de este método con el editor de código.
         /// </summary>
         private void InitializeComponent()
         {
-            this.textbox_numerico2 = new _166_User_Control.Textbox_numerico();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // textbox_numerico2
+            // textBox1
             // 
-            this.textbox_numerico2.Location = new System.Drawing.Point(27, 26);
-            this.textbox_numerico2.Name = "textbox_numerico2";
-            this.textbox_numerico2.Size = new System.Drawing.Size(167, 108);
-            this.textbox_numerico2.TabIndex = 0;
+            this.textBox1.Location = new System.Drawing.Point(3, 3);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(139, 20);
+            this.textBox1.TabIndex = 0;
             // 
-            // Form1
+            // Prueba
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(508, 216);
-            this.Controls.Add(this.textbox_numerico2);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Controls.Add(this.textBox1);
+            this.Name = "Prueba";
+            this.Size = new System.Drawing.Size(216, 137);
+            this.Load += new System.EventHandler(this.Prueba_Load);
+            this.Resize += new System.EventHandler(this.Prueba_Resize);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private Textbox_numerico textbox_numerico1;
-        private Textbox_numerico textbox_numerico2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
-

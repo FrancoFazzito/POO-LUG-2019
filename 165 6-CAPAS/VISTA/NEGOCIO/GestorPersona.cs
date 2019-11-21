@@ -15,6 +15,14 @@ namespace NEGOCIO
         }
         public void Alta(Persona value)
         {
+            //logica
+
+
+
+
+
+
+            //
             mapper.Alta(value);
         }
 
