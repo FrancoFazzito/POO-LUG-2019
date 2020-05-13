@@ -1,0 +1,7 @@
+C:\Users\i7 5820K\Downloads\Dictionary functional\dictFunc\dictFunc\obj\Debug\dictFunc.csprojAssemblyReference.cache
+C:\Users\i7 5820K\Downloads\Dictionary functional\dictFunc\dictFunc\obj\Debug\dictFunc.csproj.CoreCompileInputs.cache
+C:\Users\i7 5820K\Downloads\Dictionary functional\dictFunc\dictFunc\bin\Debug\dictFunc.exe.config
+C:\Users\i7 5820K\Downloads\Dictionary functional\dictFunc\dictFunc\bin\Debug\dictFunc.exe
+C:\Users\i7 5820K\Downloads\Dictionary functional\dictFunc\dictFunc\bin\Debug\dictFunc.pdb
+C:\Users\i7 5820K\Downloads\Dictionary functional\dictFunc\dictFunc\obj\Debug\dictFunc.exe
+C:\Users\i7 5820K\Downloads\Dictionary functional\dictFunc\dictFunc\obj\Debug\dictFunc.pdb
